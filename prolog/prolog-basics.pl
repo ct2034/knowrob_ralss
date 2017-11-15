@@ -18,8 +18,13 @@
 %   woman(yolanda).
 %   playsAirGuitar(jody). 
 %
-
 refrigerator(fridge4).
+cup(cup0).
+
+diary(milk1).
+cupboard(cupboard3).
+
+meat(ham2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Rules
@@ -35,9 +40,10 @@ refrigerator(fridge4).
 % This fundamental deduction step is called modus ponens. 
 %
 
+
 %%%
 % Dairy products and meat products are perishable
-perishable(Item) :- fail.
+perishable(Item) :- meat(Item) ; diary(Item) .
 
 %%%
 % Clause 1: Perishable items are stored in refrigerators,
